@@ -7,30 +7,67 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <script src="https://use.fontawesome.com/faebb6ae54.js"></script>
-
+    <script src="https://kit.fontawesome.com/2e7c019ffa.js" crossorigin="anonymous"></script>
 
     <title>Vue Boolzapp</title>
 </head>
 <body>
-    <div class="top-green-background-part"></div>
+    <div class="top-green-background-part" id="app"></div>
 
     <div class="main-content">
 
+        <!-- PARTE SINISTRA -->
         <div class="left-aside">
 
+            <!-- Parte in alto a sinistra per l'account utente -->
             <div class="top-bar-left-aside">
     
+                <div class="img-user-container">
+                    <img class="img-user" src="imgs/avatar_io.jpg" alt="">
+
+                    
+                </div>
+                
+                <div class="space-grow"></div>
+
+                <div class="user-settings">
+                    
+                    <i class="fas fa-circle-notch"></i>
+
+                    <i class="fas fa-comment-alt"></i>
+
+                    <i class="fas fa-ellipsis-v"></i>
+                    
+                </div>
             </div>
 
 
             <div class="notification-bar">
 
+                <div class="bell-container">
+                    <i class="fas fa-bell-slash"></i>
+                </div>
+
+                <div class="text-container">
+
+                    <h4>
+                        Ricevi notifiche di nuovi messaggi
+                    </h4>
+    
+                    <span class="underline-text">
+                        Attiva notifiche desktop
+                    </span>
+
+                </div>
+
             </div>
 
 
             <div class="search-bar">
-    
+                <input type="text" class="contact-search" 
+                placeholder="                Cerca o inizia una nuova chat">
+
+                <i class="fas fa-search"></i>
             </div>
 
 
