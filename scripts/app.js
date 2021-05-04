@@ -175,8 +175,12 @@ const app = new Vue({
             },
             
         ],
+        activeUser: {},
     },
     methods: {
-        
+        // Funzione che recupera al CLICK l'oggetto da stampare in CHAT
+        onUserClick(clickedUser) {
+            this.activeUser = clickedUser
+        }
     },
 })

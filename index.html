@@ -74,7 +74,7 @@
                 <!-- chats nel left aside -->
                 <ul class="contacts">
                     
-                    <li class="contact" v-for="contact in contacts">
+                    <li class="contact" v-for="contact in contacts" @click="onUserClick(contact)">
 
                         <div class="img-contact-container">
                             <img :src=" contact.avatar " alt="" class="img-contact">
@@ -101,13 +101,13 @@
                 <div class="top-bar-right-aside">
                     
                     <div class="img-chat-container">
-                        <img src="imgs/avatar_4.jpg" alt="" class="img-chat">
+                        <img  :src=" activeUser.avatar " alt="" class="img-chat">
                     </div>
 
                     <div class="text-chat-container">
-                        <h4>Michele</h4>
+                        <h4>{{activeUser.name}}</h4>
 
-                        <span>Ultimo accesso oggi alle 16:45</span>
+                        <span>{{'Ultimo accesso oggi alle 12:03'}}</span>
                     </div>
 
                     <div class="chat-grow"></div>
@@ -121,12 +121,10 @@
                 </div>
                 
                 <!-- contenuto centrale della chat -->
-                <ul class="msg-part">
-                    <li class="sent-message">Hai portato a spasso il cane?</li>
-
-                    <li class="sent-message">Ricordati di dargli da mangiare</li>
-
-                    <li class="received-message">Tutto fatto!</li>
+                <ul class="msg-part-container">
+                    <div class="msg-part" v-if="activeUser">
+                        <li class="sent-message" v-for="message in activeUser.messages">{{ message.text }}</li>
+                    </div>
                 </ul>
                 
                 <!-- parte input di testo della chat -->

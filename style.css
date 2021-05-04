@@ -212,17 +212,19 @@ body {
 
     padding: 10px;
 }
-.msg-part {
+.msg-part-container {
     width: 100%;
     
     flex-grow: 1;
 
     background-image: url("imgs/mine.jpg");
 
-    overflow-y: scroll;
-
+}
+.msg-part {
     display: flex;
     flex-direction: column;
+    
+    overflow-y: scroll;
 }
 .text-part {
     width: 100%;
