@@ -212,7 +212,7 @@ body {
 
     padding: 10px;
 }
-.central-background-part {
+.msg-part {
     width: 100%;
     
     flex-grow: 1;
@@ -220,6 +220,9 @@ body {
     background-image: url("imgs/mine.jpg");
 
     overflow-y: scroll;
+
+    display: flex;
+    flex-direction: column;
 }
 .text-part {
     width: 100%;
@@ -255,6 +258,38 @@ body {
 
     font-size: 110%;
 }
+
+
+
+/* Contenuto centrale della chat MESSAGGI */
+.msg-part > * {
+    list-style-type: none;
+}
+.sent-message {
+    text-align: right;
+
+    background-color: lightgreen;
+
+    align-self: flex-end;
+
+    padding: 5px;
+    margin: 20px;
+
+    border-radius: 10px;
+}
+.received-message {
+    text-align: right;
+
+    background-color: whitesmoke;
+
+    align-self: flex-start;
+
+    padding: 5px;
+    margin: 20px;
+
+    border-radius: 10px;
+}
+
 
 
 /* text area della chat in basso */
