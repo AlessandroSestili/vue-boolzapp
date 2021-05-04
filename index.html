@@ -12,87 +12,108 @@
     <title>Vue Boolzapp</title>
 </head>
 <body>
-    <div class="top-green-background-part" id="app"></div>
 
-    <div class="main-content">
+    <div id="app">
 
-        <!-- PARTE SINISTRA -->
-        <div class="left-aside">
-
-            <!-- Parte in alto a sinistra per l'account utente -->
-            <div class="top-bar-left-aside">
-    
-                <div class="img-user-container">
-                    <img class="img-user" src="imgs/avatar_io.jpg" alt="">
-
+        <div class="top-green-background-part"></div>
+        
+        <div class="main-content">
+            
+            <!-- PARTE SINISTRA -->
+            <div class="left-aside">
+                
+                <!-- Parte in alto a sinistra per l'account utente -->
+                <div class="top-bar-left-aside">
+                    
+                    <div class="img-user-container">
+                        <img class="img-user" src="imgs/avatar_io.jpg" alt="">
+                        
+                        
+                    </div>
+                    
+                    <div class="space-grow"></div>
+                    
+                    <div class="user-settings">
+                        
+                        <i class="fas fa-circle-notch"></i>
+                        
+                        <i class="fas fa-comment-alt"></i>
+                        
+                        <i class="fas fa-ellipsis-v"></i>
+                        
+                    </div>
+                </div>
+                
+                <!-- Parte delle notifiche in alto a sinistra -->
+                <div class="notification-bar">
+                    
+                    <div class="bell-container">
+                        <i class="fas fa-bell-slash"></i>
+                    </div>
+                    
+                    <div class="text-container">
+                        
+                        <h4>
+                            Ricevi notifiche di nuovi messaggi
+                        </h4>
+                        
+                        <span class="underline-text">
+                            Attiva notifiche desktop
+                        </span>
+                        
+                    </div>
                     
                 </div>
                 
-                <div class="space-grow"></div>
-
-                <div class="user-settings">
+                <!-- Tab ricerca a sinistra -->
+                <div class="search-bar">
+                    <input type="text" class="contact-search" 
+                    placeholder="                Cerca o inizia una nuova chat">
                     
-                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-search"></i>
+                </div>
+                
+                <!-- chat nel left aside -->
+                <ul class="contacts">
+                    
+                    <li class="contact" v-for="contact in contacts">
 
-                    <i class="fas fa-comment-alt"></i>
+                        <div class="img-contact-container">
+                            <img src="" alt="" class="img-contact">
+                        </div>
 
-                    <i class="fas fa-ellipsis-v"></i>
+                        <div class="text-contact-container">
+
+                            <h4 class="contact-name">{{ contact.name }}</h4>
+
+                            <span class="no-msg-span">Non ci sono messaggi!</span>
+
+                        </div>
+
+                    </li>
+                    
+                </ul>
+
+            </div>
+            
+            
+            <div class="right-aside">
+                
+                <div class="top-bar-right-aside">
                     
                 </div>
+                
+                <div class="central-background-part"></div>
+                
+                
+                <div class="text-part"></div>
+                
             </div>
-
-
-            <div class="notification-bar">
-
-                <div class="bell-container">
-                    <i class="fas fa-bell-slash"></i>
-                </div>
-
-                <div class="text-container">
-
-                    <h4>
-                        Ricevi notifiche di nuovi messaggi
-                    </h4>
-    
-                    <span class="underline-text">
-                        Attiva notifiche desktop
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <div class="search-bar">
-                <input type="text" class="contact-search" 
-                placeholder="                Cerca o inizia una nuova chat">
-
-                <i class="fas fa-search"></i>
-            </div>
-
-
-            <div class="contacts">
-
-            </div>
-        </div>
-
-
-        <div class="right-aside">
-
-            <div class="top-bar-right-aside">
-    
-            </div>
-
-            <div class="central-background-part"></div>
-
-
-            <div class="text-part"></div>
-
+            
         </div>
 
     </div>
-    
+        
     <script src="scripts/app.js"></script>
-    <script src="scripts/data.js"></script>
 </body>
 </html>

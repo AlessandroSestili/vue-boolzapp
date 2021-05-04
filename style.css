@@ -158,7 +158,37 @@ body {
     transform: translateY(-50%);
 
     color: grey;
+}
 
+/* contacts ****************************/
+.contact {
+    width: 100%;
+    height: 12%;
+
+    border-bottom: 1px solid lightgray;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 10px 0 10px;
+}
+.img-contact-container {
+    width: 60px;
+    height: 60px;
+}
+.img-contact {
+    max-width: 100%;
+
+    border-radius: 50%;
+}
+.text-contact-container {
+    margin-left: 10px;
+}
+.no-msg-span {
+    color: grey;
+
+    margin-top: 5px;
+    display: block;
 }
 
 
