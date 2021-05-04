@@ -27,8 +27,6 @@
                     
                     <div class="img-user-container">
                         <img class="img-user" src="imgs/avatar_io.jpg" alt="">
-                        
-                        
                     </div>
                     
                     <div class="space-grow"></div>
@@ -73,13 +71,13 @@
                     <i class="fas fa-search"></i>
                 </div>
                 
-                <!-- chat nel left aside -->
+                <!-- chats nel left aside -->
                 <ul class="contacts">
                     
                     <li class="contact" v-for="contact in contacts">
 
                         <div class="img-contact-container">
-                            <img src="" alt="" class="img-contact">
+                            <img :src=" contact.avatar " alt="" class="img-contact">
                         </div>
 
                         <div class="text-contact-container">
@@ -96,17 +94,50 @@
 
             </div>
             
-            
+            <!-- PARTE DESTRA -->
             <div class="right-aside">
                 
+                <!-- header della chat -->
                 <div class="top-bar-right-aside">
+                    
+                    <div class="img-chat-container">
+                        <img src="imgs/avatar_4.jpg" alt="" class="img-chat">
+                    </div>
+
+                    <div class="text-chat-container">
+                        <h4>Michele</h4>
+
+                        <span>Ultimo accesso oggi alle 16:45</span>
+                    </div>
+
+                    <div class="chat-grow"></div>
+
+                    <div class="chat-settings">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+
+                </div>
+                
+                <!-- contenuto centrale della chat -->
+                <div class="central-background-part">
                     
                 </div>
                 
-                <div class="central-background-part"></div>
-                
-                
-                <div class="text-part"></div>
+                <!-- parte input di testo della chat -->
+                <div class="text-part">
+                    <div class="emoji-container">
+                        <i class="fas fa-surprise"></i>
+                    </div>
+
+                    <input type="text" class="text-msg-area" 
+                    placeholder=" Scrivi un messaggio ">
+
+                    <div class="mic-container">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                </div>
                 
             </div>
             

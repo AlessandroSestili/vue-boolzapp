@@ -4,7 +4,7 @@ const app = new Vue({
         contacts: [
             {
                 name: 'Michele',
-                avatar: '_1',
+                avatar: 'imgs/avatar_1.jpg',
                 visible: true,
                 messages: [
                     {
@@ -26,7 +26,7 @@ const app = new Vue({
             },
             {
                 name: 'Fabio',
-                avatar: '_2',
+                avatar: 'imgs/avatar_2.jpg',
                 visible: true,
                 messages: [
                     {
@@ -48,7 +48,7 @@ const app = new Vue({
             }, 
             {
                 name: 'Samuele',
-                avatar: '_3',
+                avatar: 'imgs/avatar_3.jpg',
                 visible: true,
                 messages: [
                     {
@@ -69,8 +69,8 @@ const app = new Vue({
                 ],
             },
             {
-                name: 'Luisa',
-                avatar: '_4',
+                name: 'Luigi',
+                avatar: 'imgs/avatar_4.jpg',
                 visible: true,
                 messages: [
                     {
@@ -87,7 +87,7 @@ const app = new Vue({
             },
             {
                 name: 'Simone',
-                avatar: '_5',
+                avatar: 'imgs/avatar_5.jpg',
                 visible: true,
                 messages: [
                     {
@@ -108,8 +108,8 @@ const app = new Vue({
                 ],
             },
             {
-                name: 'Ottavio',
-                avatar: '_6',
+                name: 'Salmira',
+                avatar: 'imgs/avatar_6.jpg',
                 visible: true,
                 messages: [
                     {
@@ -130,8 +130,8 @@ const app = new Vue({
                 ],
             },
             {
-                name: 'Tania',
-                avatar: '_7',
+                name: 'Loreandry',
+                avatar: 'imgs/avatar_7.jpg',
                 visible: true,
                 messages: [
                     {
@@ -152,8 +152,8 @@ const app = new Vue({
                 ],
             },
             {
-                name: 'Raffaella',
-                avatar: '_8',
+                name: 'Rex',
+                avatar: 'imgs/avatar_8.jpg',
                 visible: true,
                 messages: [
                     {
@@ -175,5 +175,8 @@ const app = new Vue({
             },
             
         ],
+    },
+    methods: {
+        
     },
 })

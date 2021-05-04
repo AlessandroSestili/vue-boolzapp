@@ -189,6 +189,7 @@ body {
 
     margin-top: 5px;
     display: block;
+    font-size: 85%;
 }
 
 
@@ -205,6 +206,11 @@ body {
     height: 7%;
 
     background-color: rgb(237, 237, 237);
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px;
 }
 .central-background-part {
     width: 100%;
@@ -222,3 +228,50 @@ body {
     background-color: rgb(237, 237, 237);
 }
 
+
+/* TOP-BAR-RIGHT-SIDE ******************* */
+
+/* header della chat  */
+.img-chat-container {
+    width: 40px;
+    height: 40px;
+}
+.img-chat {
+    max-width: 100%;
+    
+    border-radius: 50%;
+}
+.text-chat-container {
+
+}
+.chat-grow {
+    flex-grow: 1;
+}
+.chat-settings {
+    color: grey;
+}
+.chat-settings > * {
+    padding: 8px;
+
+    font-size: 110%;
+}
+
+
+/* text area della chat in basso */
+.text-part {
+    display: flex;
+    align-items: center;
+
+    color: grey;
+}
+.text-part > * {
+    margin: 15px;
+}
+.text-msg-area {
+    height: 80%;
+
+    flex-grow: 1;
+
+    border-radius: 25px;
+    border: none;
+}
