@@ -83,7 +83,7 @@ body {
 
     border-right: 1px solid lightgrey;
 
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 /* .img-user-container ****************************/
@@ -228,7 +228,7 @@ body {
     display: flex;
     flex-direction: column;
     
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .text-part {
     width: 100%;
