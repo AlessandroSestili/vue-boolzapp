@@ -150,6 +150,10 @@ body {
     margin-top: 3px;
 
     border: none;
+
+    padding-left: 50px;
+
+    text-align: left;
 }
 .search-bar .fas {
     position: absolute;
@@ -268,8 +272,6 @@ body {
     list-style-type: none;
 }
 .sent {
-    text-align: right;
-
     background-color: lightgreen;
 
     align-self: flex-end;
@@ -280,8 +282,6 @@ body {
     border-radius: 10px;
 }
 .received {
-    text-align: right;
-
     background-color: whitesmoke;
 
     align-self: flex-start;

@@ -66,7 +66,7 @@
                 <!-- Tab ricerca a sinistra -->
                 <div class="search-bar">
                     <input type="text" class="contact-search" 
-                    placeholder="                Cerca o inizia una nuova chat">
+                    placeholder="Cerca o inizia una nuova chat">
                     
                     <i class="fas fa-search"></i>
                 </div>
@@ -123,7 +123,7 @@
                 <!-- contenuto centrale della chat -->
                 <ul class="msg-part-container">
                     <div class="msg-part" v-if="activeUser">
-                        <li  v-for="message in activeUser.messages" :class=" message.status ">{{ message.text }}</li>
+                        <li  v-for="message in activeUser.messages" :class="message.status">{{ message.text }}</li>
                     </div>
                 </ul>
                 
