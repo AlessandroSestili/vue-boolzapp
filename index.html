@@ -66,7 +66,7 @@
                 <!-- Tab ricerca a sinistra -->
                 <div class="search-bar">
                     <input type="text" class="contact-search" 
-                    placeholder="Cerca o inizia una nuova chat">
+                    placeholder="Cerca o inizia una nuova chat" v-model="userInputSearch">
                     
                     <i class="fas fa-search"></i>
                 </div>
@@ -74,7 +74,7 @@
                 <!-- chats nel left aside -->
                 <ul class="contacts">
                     
-                    <li class="contact" v-for="contact in contacts" @click="onUserClick(contact)">
+                    <li class="contact" v-for="contact in filterSearch(userInputSearch)" @click="onUserClick(contact)">
 
                         <div class="img-contact-container">
                             <img :src=" contact.avatar " alt="" class="img-contact">

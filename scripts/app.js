@@ -177,8 +177,13 @@ const app = new Vue({
         ],
         activeUser: {},
         userInput: "",
+        userInputSearch: "",
     },
-    computed: {},
+    computed: {
+        ciao() {
+            return this.contacts.name.toLowerCase()
+        }
+    },
     methods: {
         // Funzione che recupera al CLICK l'oggetto da stampare in CHAT
         onUserClick(clickedUser) {
@@ -193,7 +198,6 @@ const app = new Vue({
             });
 
             setTimeout(() => {
-                
                 this.activeUser.messages.push({
                     date: "",
                     text: "Ok!",
@@ -201,6 +205,11 @@ const app = new Vue({
                 })
             }, 1000 , "ciao");
         },
+
+        // funzione che mi fa la ricerca dei nomi delle chat
+        filterSearch(userInputSearch) {
+            return this.contacts.filter(element => element.name.toLowerCase().includes(userInputSearch.toLowerCase()));
+        }
     },
 
 })
