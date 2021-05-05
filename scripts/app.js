@@ -190,14 +190,16 @@ const app = new Vue({
                 date: "",
                 text: this.userInput,
                 status: "sent"
-            }),
-                
-            this.activeUser.messages.push({
-                date: "",
-                text: "Ok!",
-                status: "received"
-            })
+            });
 
+            setTimeout(() => {
+                
+                this.activeUser.messages.push({
+                    date: "",
+                    text: "Ok!",
+                    status: "received"
+                })
+            }, 1000 , "ciao");
         },
     },
 
