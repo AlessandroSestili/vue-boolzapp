@@ -134,7 +134,7 @@
                     </div>
 
                     <input type="text" class="text-msg-area" 
-                    placeholder=" Scrivi un messaggio ">
+                    placeholder=" Scrivi un messaggio " v-model="userInput" @keydown.enter="sendAMsg()">
 
                     <div class="mic-container">
                         <i class="fas fa-microphone"></i>

@@ -45,7 +45,7 @@ const app = new Vue({
                         status: 'sent'
                     }
                 ],
-            }, 
+            },
             {
                 name: 'Samuele',
                 avatar: 'imgs/avatar_3.jpg',
@@ -173,17 +173,32 @@ const app = new Vue({
                     }
                 ],
             },
-            
+
         ],
         activeUser: {},
+        userInput: "",
     },
+    computed: {},
     methods: {
         // Funzione che recupera al CLICK l'oggetto da stampare in CHAT
         onUserClick(clickedUser) {
             this.activeUser = clickedUser
         },
-        getMsgClasses() {
-            
-        }
+
+        sendAMsg() {
+            this.activeUser.messages.push({
+                date: "",
+                text: this.userInput,
+                status: "sent"
+            }),
+                
+            this.activeUser.messages.push({
+                date: "",
+                text: "Ok!",
+                status: "received"
+            })
+
+        },
     },
+
 })
