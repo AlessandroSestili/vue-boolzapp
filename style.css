@@ -267,7 +267,7 @@ body {
 .msg-part > * {
     list-style-type: none;
 }
-.sent-message {
+.sent {
     text-align: right;
 
     background-color: lightgreen;
@@ -279,7 +279,7 @@ body {
 
     border-radius: 10px;
 }
-.received-message {
+.received {
     text-align: right;
 
     background-color: whitesmoke;
