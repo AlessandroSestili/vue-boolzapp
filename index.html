@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="https://kit.fontawesome.com/2e7c019ffa.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
     <title>Vue Boolzapp</title>
 </head>
@@ -107,7 +108,7 @@
                     <div class="text-chat-container">
                         <h4>{{activeUser.name}}</h4>
 
-                        <span>{{'Ultimo accesso oggi alle 12:03'}}</span>
+                        <span>Ultimo accesso oggi alle {{ activeUserLastAccess }}</span>
                     </div>
 
                     <div class="chat-grow"></div>

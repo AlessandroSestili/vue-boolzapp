@@ -178,17 +178,26 @@ const app = new Vue({
         userInput: "",
         userInputSearch: "",
     },
+    computed: {
+        // Funzione che recupera l orario dell ultimo messaggio ricevuto dall active user
+        activeUserLastAccess() {
+            const msgsReceived = this.activeUser.messages.filter((msg) => msg.status === "received")
+            const lastMsg = msgsReceived[msgsReceived.length -1].date;
+            return this.formatDate(lastMsg)
+        }
+    },
     methods: {
         // Funzione che recupera al CLICK l'oggetto da stampare in CHAT
         onUserClick(clickedUser) {
             this.activeUser = clickedUser
         },
 
+        // Funzione che manda messaggi e risponde
         sendAMsg() {
             console.log(this.userInput);
 
             this.activeUser.messages.push({
-                date: "",
+                date: moment().format("DD/MM/YYYY HH:mm:ss"),
                 text: this.userInput,
                 status: "sent"
             });
@@ -198,7 +207,7 @@ const app = new Vue({
 
             setTimeout(() => {
                 this.activeUser.messages.push({
-                    date: "",
+                    date: moment().format("DD/MM/YYYY HH:mm:ss"),
                     text: "Ok!",
                     status: "received"
                 })
@@ -210,10 +219,14 @@ const app = new Vue({
             return this.contacts.filter(element => element.name.toLowerCase().includes(userInputSearch.toLowerCase()));
         },
 
-        // ***************** TEST2
-        // svuotaInput() {
-        //     userInput = ""
-        // }
+        // Funzione che converte l'orario
+        formatDate(string) {
+            return moment(string , "DD/MM/YYYY HH:mm:ss").format("HH:mm")
+        }
     },
+    mounted() {
+        // Perche funziona se metto contacts ma no se metto active user
+        this.activeUser = this.contacts[1]
+    }
 
 })
