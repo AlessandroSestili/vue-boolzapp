@@ -123,7 +123,11 @@
                 <!-- contenuto centrale della chat -->
                 <ul class="msg-part-container">
                     <div class="msg-part" v-if="activeUser">
-                        <li  v-for="message in activeUser.messages" :class="message.status">{{ message.text }}</li>
+                        <li  v-for="message in activeUser.messages" :class="message.status" class="msg">{{ message.text }}
+                            <i class="fas fa-caret-down" 
+                            :class=
+                            "(message.status === 'sent')? 'sent-triangle' : 'received-triangle' "></i>
+                        </li>
                     </div>
                 </ul>
                 
@@ -134,7 +138,7 @@
                     </div>
 
                     <input type="text" class="text-msg-area" 
-                    placeholder=" Scrivi un messaggio " v-model="userInput" @keydown.enter="sendAMsg()">
+                    placeholder=" Scrivi un messaggio " v-model="userInput" @keydown.enter="sendAMsg()" >
 
                     <div class="mic-container">
                         <i class="fas fa-microphone"></i>

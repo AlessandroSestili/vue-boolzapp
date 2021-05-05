@@ -173,16 +173,10 @@ const app = new Vue({
                     }
                 ],
             },
-
         ],
         activeUser: {},
         userInput: "",
         userInputSearch: "",
-    },
-    computed: {
-        ciao() {
-            return this.contacts.name.toLowerCase()
-        }
     },
     methods: {
         // Funzione che recupera al CLICK l'oggetto da stampare in CHAT
@@ -191,11 +185,16 @@ const app = new Vue({
         },
 
         sendAMsg() {
+            console.log(this.userInput);
+
             this.activeUser.messages.push({
                 date: "",
                 text: this.userInput,
                 status: "sent"
             });
+
+            // ************************** TEST1
+            this.userInput = ""
 
             setTimeout(() => {
                 this.activeUser.messages.push({
@@ -209,7 +208,12 @@ const app = new Vue({
         // funzione che mi fa la ricerca dei nomi delle chat
         filterSearch(userInputSearch) {
             return this.contacts.filter(element => element.name.toLowerCase().includes(userInputSearch.toLowerCase()));
-        }
+        },
+
+        // ***************** TEST2
+        // svuotaInput() {
+        //     userInput = ""
+        // }
     },
 
 })
