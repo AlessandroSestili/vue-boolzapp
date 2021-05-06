@@ -184,7 +184,7 @@ const app = new Vue({
             const msgsReceived = this.activeUser.messages.filter((msg) => msg.status === "received")
             const lastMsg = msgsReceived[msgsReceived.length -1].date;
             return this.formatDate(lastMsg)
-        }
+        },
     },
     methods: {
         // Funzione che recupera al CLICK l'oggetto da stampare in CHAT
@@ -194,15 +194,12 @@ const app = new Vue({
 
         // Funzione che manda messaggi e risponde
         sendAMsg() {
-            console.log(this.userInput);
-
             this.activeUser.messages.push({
                 date: moment().format("DD/MM/YYYY HH:mm:ss"),
                 text: this.userInput,
                 status: "sent"
             });
 
-            // ************************** TEST1
             this.userInput = ""
 
             setTimeout(() => {
@@ -211,21 +208,28 @@ const app = new Vue({
                     text: "Ok!",
                     status: "received"
                 })
-            }, 1000 , "ciao");
+            }, 1000);
         },
 
         // funzione che mi fa la ricerca dei nomi delle chat
         filterSearch(userInputSearch) {
             return this.contacts.filter(element => element.name.toLowerCase().includes(userInputSearch.toLowerCase()));
+            // Se volessi filtrare solo i nomi che iniziano con dovrei usare strartsWith()
         },
 
         // Funzione che converte l'orario
         formatDate(string) {
             return moment(string , "DD/MM/YYYY HH:mm:ss").format("HH:mm")
+        },
+
+        activeUserLastMsg(contact) {
+            const msgsReceived = contact.messages.filter((msg) => msg.status === "received")
+            const lastMsg = msgsReceived[msgsReceived.length -1].text;
+            return lastMsg
         }
     },
     mounted() {
-        // Perche funziona se metto contacts ma no se metto active user
+        // Perche funziona se metto contacts ma no se metto active user *********************
         this.activeUser = this.contacts[1]
     }
 
