@@ -227,6 +227,7 @@ const app = new Vue({
         activeUser: {},
         userInput: "",
         userInputSearch: "",
+        showPopup:false,
     },
     computed: {
         // Funzione che recupera l orario dell ultimo messaggio ricevuto dall active user
@@ -314,7 +315,7 @@ const app = new Vue({
         
         // Al click del messaggio mostra il popup
         FunShowPopup(message) {
-            message.showPopup= true
+            message.showPopup = !message.showPopup
         },
 
         //
