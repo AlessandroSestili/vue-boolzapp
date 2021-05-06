@@ -126,12 +126,31 @@
                 <!-- contenuto centrale della chat -->
                 <ul class="msg-part-container">
                     <div class="msg-part" v-if="activeUser">
-                        <li  v-for="message in activeUser.messages" :class="message.status" class="msg">{{ message.text }}
+
+                        <li  v-for="(message , indexMsg) in activeUser.messages" 
+                        :class="message.status" 
+                        class="msg">
+                            
+                            <span>{{ message.text }}</span>
+
                             <i class="fas fa-caret-down" 
                             :class=
                             "(message.status === 'sent')? 'sent-triangle' : 'received-triangle' "></i>
 
-                            <div class="msg-time">{{ activeUserMsgDate(message) }}</div>
+                            <div class="msg-time">
+                                {{ activeUserMsgDate(message) }}
+                            </div>
+
+                            <i class="fas fa-chevron-down" @click="FunShowPopup(message)">
+                                <div v-if="message.showPopup" class="msg-popup">
+
+                                    <div>Message Info</div>
+
+                                    <div @click="deleteMsg(indexMsg)">Delete Message</div>
+
+                                </div> 
+                            </i>
+
                         </li>
                     </div>
                 </ul>
