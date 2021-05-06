@@ -310,6 +310,8 @@ body {
 
     box-shadow: 1px 1px 6px black;
 
+    z-index: 2;
+
 }
 .msg-popup > * {
     margin-bottom: 12px;
@@ -336,7 +338,6 @@ body {
     margin: 15px;
 
     border-radius: 10px;
-
 }
 .received-triangle{
     position: absolute;
