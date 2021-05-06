@@ -85,7 +85,9 @@
 
                             <h4 class="contact-name">{{ contact.name }}</h4>
 
-                            <span class="no-msg-span">{{ activeUserLastMsg(contact) }}</span>
+                            <span class="no-msg-span">{{ UsersLastMsg(contact) }}</span>
+
+                            <div class="contact-time">{{ UsersLastMsgDate(contact) }}</div>
 
                         </div>
 
@@ -128,6 +130,8 @@
                             <i class="fas fa-caret-down" 
                             :class=
                             "(message.status === 'sent')? 'sent-triangle' : 'received-triangle' "></i>
+
+                            <div class="msg-time">{{ activeUserMsgDate(message) }}</div>
                         </li>
                     </div>
                 </ul>

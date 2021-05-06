@@ -84,6 +84,8 @@ body {
     border-right: 1px solid lightgrey;
 
     overflow-y: auto;
+
+
 }
 
 /* .img-user-container ****************************/
@@ -175,6 +177,8 @@ body {
     align-items: center;
 
     padding: 0 10px 0 10px;
+
+    position: relative;
 }
 .img-contact-container {
     width: 60px;
@@ -187,6 +191,7 @@ body {
 }
 .text-contact-container {
     margin-left: 10px;
+
 }
 .no-msg-span {
     color: grey;
@@ -194,6 +199,15 @@ body {
     margin-top: 5px;
     display: block;
     font-size: 85%;
+}
+.contact-time {
+    position: absolute;
+
+    top: 5px;
+    right: 5px;
+
+    color: grey;
+    font-size: 70%;
 }
 
 
@@ -253,6 +267,15 @@ body {
 
     color: lightgreen;
 }
+.msg-time {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+
+    font-size: 70%;
+
+    color: grey;
+}
 
 /* text-part */
 .text-part {
@@ -301,8 +324,8 @@ body {
 
     align-self: flex-end;
 
-    padding: 10px;
-    margin: 20px;
+    padding: 10px 50px 10px 10px;
+    margin: 15px;
 
     border-radius: 10px;
 }
@@ -311,8 +334,8 @@ body {
 
     align-self: flex-start;
 
-    padding: 10px;
-    margin: 20px;
+    padding: 10px 50px 10px 10px;
+    margin: 15px;
 
     border-radius: 10px;
 

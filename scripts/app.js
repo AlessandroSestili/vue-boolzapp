@@ -222,10 +222,25 @@ const app = new Vue({
             return moment(string , "DD/MM/YYYY HH:mm:ss").format("HH:mm")
         },
 
-        activeUserLastMsg(contact) {
+        // Stampa nelle chats l'ultimo messaggio del contatto
+        UsersLastMsg(contact) {
             const msgsReceived = contact.messages.filter((msg) => msg.status === "received")
             const lastMsg = msgsReceived[msgsReceived.length -1].text;
             return lastMsg
+        },
+
+        // stampa ora dell'ultimo messaggio nella chat
+        UsersLastMsgDate(contact) {
+            const msgsReceived = contact.messages
+            const lastMsg = msgsReceived[msgsReceived.length -1].date;
+            return this.formatDate(lastMsg)
+        },
+
+        // Funzione che stampa in ogni messaggio il proprio orario in cui e stato inviato
+        activeUserMsgDate(message) {
+            const dateMsg = message.date
+
+            return this.formatDate(dateMsg)
         }
     },
     mounted() {
